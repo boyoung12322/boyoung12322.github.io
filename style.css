@@ -1,0 +1,633 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  border-collapse: collapse;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+
+body{
+  width:100vw;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: #141517;
+  font-family:'Noto Sans KR', sans-serif;
+
+}
+
+a:hover, a:visited, a:link, a:active{
+  text-decoration: none;
+}
+
+a:hover{
+  color: white;
+  font-family: 'SB 어그로 Medium';
+}
+
+:link{
+  color: white;
+}
+:visited{
+  color: white;
+}
+
+.gnb{
+  border-bottom: solid 1px white;
+  position: relative;
+  height: 100px;
+}
+#gnb1{
+  height:40px;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#gnb2{
+  height: 60px;
+  display: inline-block;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  z-index: 9999;
+}
+
+.log{
+  font-size: 15px;
+  text-align: center;
+  float: right;
+  padding: 8px;
+  margin-right: 80px;
+  position: relative;
+  width: 80px;
+}
+
+.log:after{
+  content:"";
+  width: 0px;
+  height:1px;
+  display: block;
+  position:relative;
+  background: white;
+  top: 5px;
+  transition:0.3s;
+}
+
+.log:hover:after{
+  width: 70px;
+  transition:0.3s;
+}
+
+.gnb_menu{
+  float: right;
+  margin-right: 50px;
+  font-size: 22px;
+  text-align: center;
+  color: white;
+  width: 130px;
+  overflow: hidden;
+}
+
+.gnb_menu a{
+  display:block;
+  width: 130px;
+  height: 60px;
+  padding: 13px;
+  transition:0.3s;
+}
+
+
+.logo{
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
+  z-index: 9999;
+}
+.logo a{display: inline-block;}
+
+.foot{
+  background: #101010;
+  border-top: solid 1px white;
+  width: auto;
+  height: 150px;
+  margin-top: -130px;
+}
+
+
+.foot img{
+  width: 200px;
+  margin: 50px 0 0 350px;
+}
+
+.foot p{
+  text-align: left;
+  margin: 50px 0 0 1300px;
+  color: white;
+  font-size:10px;
+  line-height: 25px;
+  width: 550px;
+  position: relative;
+  top: -120px;
+}
+
+/* gnb css △ */
+
+/* index.html(main) css ↓ */
+
+.movie_bg{
+  position: relative;
+  top: -50px;
+}
+
+.poster{
+  display: flex;
+  height: 250px;
+  justify-content: center;
+}
+
+.poster img{
+  width: 250px;
+  height: 350px;
+  margin: 40px;
+  border: solid 1px white;
+  box-shadow: 5px 5px 0px #222324;
+}
+
+.text_mv{
+  width: 250px;
+  height: 50px;
+  margin: 150px 40px 0 40px;
+  border: solid 2px white;
+  text-align: center;
+  padding: 14px;
+  font-weight: bold;
+  color: white;
+  font-size: 15px;
+}
+
+.but1{
+  width: 85px;
+  height: 30px;
+  background: white;
+  text-align: center;
+  padding: 5px;
+  font-weight: bold;
+  color: #2929a0;
+  font-size: 15px;
+  margin-top: -40px;
+}
+
+.but2{
+  width: 155px;
+  height: 30px;
+  background: #2929a0;
+  text-align: center;
+  padding: 5px;
+  font-weight: bold;
+  color: white;
+  font-size: 15px;
+  margin: -40px 80px 0 10px;
+}
+
+.sel_mv{
+  position: relative;
+  top: -150px;
+  display: flex;
+  height: 250px;
+  justify-content: center;
+  text-align: center;
+}
+
+.sel_mv p{
+  width: 1240px;
+  height: 80px;
+  border: solid 1px white;
+  font-size: 40px;
+  padding: 10px;
+  color: white;
+}
+
+.video_bl{
+  position: relative;
+  top: -300px;
+  display: flex;
+  justify-content: center;
+}
+
+#mv_info {
+  float: left;
+  width: 300px;
+  height: 450px;
+  margin-left: 58px;
+  margin-top: 5px;
+}
+
+.mv_ti{
+  width: 300px;
+  height: 40px;
+  float: right;
+  margin-right: 340px;
+  border-radius: 10px;
+  border: solid 1px white;
+  position: relative;
+  top: -340px;
+  text-align: center;
+  padding: 5px;
+  font-size: 20px;
+  color: white;
+}
+
+
+
+/* who.html css ↓ */
+
+.main_bg{
+    background: url(./img/tim_4.jpg) no-repeat center;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+.who{
+  display: flex;
+  justify-content: center;
+}
+
+.who p{
+  border : solid 1px white;
+  width: 1280px;
+  height: 100px;
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  line-height: 30px;
+  padding: 20px;
+  margin-top: -50px;
+}
+
+.who p span{
+  font-weight: bold;
+  background: #fbe56d;
+  color: black;
+}
+
+.tab_ti{
+  display: flex;
+  margin-top: 130px;
+  justify-content: center;
+}
+
+td{
+  color: white;
+  font-size: 25px;
+}
+
+#tim{
+  border-left: solid 3px white;
+  text-align: center;
+  font-size: 40px;
+}
+
+.jony_box{
+  display: block;
+  justify-content: center;
+  margin-left: 350px;
+}
+
+.jony_box p{
+  color: white;
+  border-bottom: solid 3px white;
+  text-align: left;
+  font-size: 40px;
+  margin-top: 80px;
+  padding: 10px;
+  width: 600px;
+}
+
+.jony_tx{
+  border: solid 1px white;
+  border-radius: 20px;
+  width: 1280px;
+  height: 150px;
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  line-height: 30px;
+  padding: 30px;
+  margin-top: 40px;
+
+}
+
+.img_jo{
+  display: flex;
+  justify-content: center;
+  width: 1280px;
+}
+
+#img_1{
+  margin-top: 30px;
+  width: 800px;
+  height: 500px;
+}
+
+/* Tim.html(style) css ↓ */
+
+.main_st{
+    background: url(./img/tim_3.jpg) no-repeat center;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+.style_tx{
+  display: flex;
+  justify-content: center;
+}
+
+.style_tx p{
+  border : solid 1px white;
+  width: 1280px;
+  height: 150px;
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  line-height: 30px;
+  padding: 30px;
+  margin-top: -50px;
+}
+
+.style_tx p span{
+  font-weight: bold;
+  background: #fbe56d;
+  color: black;
+}
+
+.st_1{
+  width: 300px;
+  height: 80px;
+  border: solid 3px white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  padding: 10px;
+  margin-top: 80px;
+  margin-left: 810px;
+}
+
+.keyword{
+  position: relative;
+}
+
+.key_1{
+  display: flex;
+  justify-content: center;
+}
+
+.key_box{
+  background: gray;
+  width: 350px;
+  height: 400px;
+  margin: 40px 0 0 40px;
+  box-shadow: 5px 5px 0px gray;
+  border: solid 3px white;
+}
+
+.box1{
+  width: 350px;
+  height: 50px;
+  margin: 40px 0 0 40px;
+  border: solid 2px white;
+  font-size: 20px;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+/*film css */
+
+.main_con{
+    background: url(./img/film_1.jpg) no-repeat center;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+
+.tim_st_1{
+  font-size: 250px;
+  color: white;
+  font-family: 'Kaushan Script';
+  text-align: center;
+  padding: 30px;
+  margin: 0 auto 40px;
+}
+
+.fil_box{
+  position: relative;
+}
+
+.fst_mv{
+  display: flex;
+  height: 250px;
+  margin-left: 250px;
+}
+
+.fst_yebox{
+  display: flex;
+  margin-left: 250px;
+  position: relative;
+  top: 30px;
+}
+
+.fst_year{
+  width: 80px;
+  height: 30px;
+  margin-right: 160px;
+  margin-left: 40px;
+  border-bottom: solid 2px white;
+  text-align: left;
+  padding: 3px;
+  font-weight: bold;
+  color: white;
+}
+
+.fst_mvbox{
+  width: 200px;
+  height: 300px;
+  background: yellow;
+  margin: 40px;
+  border: solid 1px black;
+}
+
+.fst_txbox{
+  width: 200px;
+  height: 50px;
+  margin: 100px 40px 0 40px;
+  border: solid 2px white;
+  text-align: center;
+  padding: 14px;
+  font-weight: bold;
+  color: white;
+  font-size: 15px;
+}
+
+.fst_txbox span{
+  font-size: 10px;
+}
+
+/* 가위손 자세히보기 페이지 css (sub.html) */
+
+.sub_con_1{
+    background: url(./img/list_1.jpg) no-repeat center;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+.sub_main{
+  position: relative;
+}
+
+.sub_but{
+/*   background: gray;*/
+  width: 1980px;
+  height: 50px;
+  margin: 30px;
+}
+
+.sub_but img{
+  width: 50px;
+  height: 50px;
+/*  background: yellow;*/
+}
+
+.sound{
+  float: right;
+  width: 300px;
+  height: 50px;
+  margin-right: 150px;
+}
+
+
+.post_box{
+  display: flex;
+  margin: 50px 30px 0 30px;
+  /*background: gray;*/
+  width: auto;
+  height: 800px;
+}
+
+.post_box img{
+  /*background: yellow;*/
+  width: 500px;
+  height: 700px;
+  box-shadow: 5px 5px 0px black;
+  margin-top: 20px;
+}
+
+.post_box h3{
+  border-left: solid 3px white;
+  margin-left: 40px;
+  /*background: red;*/
+  width: 900px;
+  height: 100px;
+  text-align: left;
+  margin-top: 20px;
+  font-size: 50px;
+  color: white;
+  padding: 13px;
+}
+
+.post_box h3 span{
+  font-size: 20px;
+  font-weight: lighter;
+
+}
+
+.in_text{
+  /* background: blue;*/
+  width: 1200px;
+  height: 400px;
+  position: relative;
+  top: -630px;
+  margin-left: 570px;
+}
+
+.in_text p{
+  color: white;
+  font-size: 20px;
+  text-align: left;
+  font-weight: 100;
+  line-height: 35px;
+}
+
+.in_act{
+  width: 1280px;
+  height: 300px;
+  position: relative;
+  top: -830px;
+  margin-left: 570px;
+  display: flex;
+  justify-content: left;
+}
+
+.act_1{
+  width: 200px;
+  height: 200px;
+  border-radius: 500px;
+  margin: 20px;
+}
+
+.in_act_tx{
+  width: 1280px;
+  height: 80px;
+  position: relative;
+  top: -900px;
+  margin-left: 570px;
+  display: flex;
+  justify-content: left;
+}
+
+.act_2{
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  margin: 20px;
+  border-top: solid 1px white;
+  color: white;
+  font-size: 25px;
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+.act_2 span{
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+/* 크리스마스악몽 자세히보기 페이지 css (sub_2.html) */
+
+.sub_con_2{
+    background: url(./img/list_2.jpg) no-repeat center;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+/* 빅피쉬 자세히보기 페이지 css (sub_3.html) */
+
+.sub_con_3{
+    background: url(./img/list_3.jpg) no-repeat center;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+/* 찰리와 초콜릿 공장 자세히보기 페이지 css (sub_4.html) */
+
+.sub_con_4{
+    background: url(./img/list_4.jpg) no-repeat center;
+    background-size:cover;
+    background-attachment: fixed;
+}
